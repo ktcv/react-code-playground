@@ -2,7 +2,7 @@
 
 * {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 13px;
 }
 
@@ -30,6 +30,7 @@
 }
 
 .editor-title {
+  font-family: 'Montserrat';
   margin: 10px;
   color: #ccc;
   font-weight: bold;
