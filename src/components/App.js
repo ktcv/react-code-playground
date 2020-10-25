@@ -2,12 +2,30 @@ import React, { useState, useEffect } from 'react'
 import Editor from './Editor'
 import useLocalStorage from '../hooks/useLocalStorage'
 
+const defaultHtml = `<h1>This is a code playground</h1>
+
+<p>Type some code to get started.</p>`
+
+const defaultCss = `body {
+  padding: 10px 25px;
+}
+
+h1, p {
+  font-family: sans-serif;
+}`
+
+const defaultJavascript = `document.body.style.backgroundColor = 'lightblue'`
+
 const App = () => {
-  const [html, setHtml] = useLocalStorage('html', '')
-  const [css, setCss] = useLocalStorage('css', '')
-  const [javascript, setJavascript] = useLocalStorage('javascript', '')
+  const [html, setHtml] = useLocalStorage('html', defaultHtml)
+  const [css, setCss] = useLocalStorage('css', defaultCss)
+  const [javascript, setJavascript] = useLocalStorage(
+    'javascript',
+    defaultJavascript
+  )
   const [srcDoc, setSrcDoc] = useState('')
 
+  console.log(html)
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(`
