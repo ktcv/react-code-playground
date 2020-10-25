@@ -26,9 +26,6 @@
   border-right: none;
 }
 
-.editor-container:nth-child(odd) {
-}
-
 .editor-title {
   font-family: 'Montserrat';
   margin: 10px;
@@ -37,8 +34,9 @@
 }
 
 .CodeMirror {
-  border: none;
-  height: 100% !important;
+  height: auto !important;
+  overflow-y: hidden !important;
+  overflow-x: auto !important;
 }
 
 .result-container {
